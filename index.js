@@ -14,7 +14,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 //Read [port] from env
-var port = process.env.port || 3000;
+var port = process.env.port || 8080;
 
 //Middleware for file serving
 app.use(express.static('public'));
