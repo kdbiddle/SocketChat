@@ -40,6 +40,11 @@ form button {
     padding: 5px 10px;
 }
 
-#messages li:nth-child(odd) {
+
+/*#messages li:nth-child(odd) {
+    background: #eee;
+}*/
+
+.me {
     background: #eee;
 }

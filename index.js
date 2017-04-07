@@ -28,10 +28,12 @@ app.get('/', function(req, res) {
 io.on('connection', function(socket) {
     console.log("A user connected!");
 
-    socket.on('message', function(msg) {
+    socket.emit('setNickname', null);
+
+    socket.on('message', function(msg, nickname) {
         console.log('Message: ' + msg);
-        io.emit('message', msg);
-        // socket.broadcast.emit('message', msg);
+        //io.emit('message', msg);
+        socket.broadcast.emit('message', msg, nickname);
     })
 
     socket.on('disconnect', function() {
